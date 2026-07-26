@@ -1,0 +1,18 @@
+/* Header Section Styles */
+header.MuiAppBar-root {
+  background-color: #ffffff;
+  color: #0e0f0f;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border: 1px solid #e0e2e5;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  z-index: 1100;
+  top: 0;
+}
+.MuiCollapse-root {
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}

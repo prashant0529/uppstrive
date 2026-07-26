@@ -1,0 +1,79 @@
+.support-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px 80px 24px;
+  color: #0e0f0f;
+  font-family: mundial, Mundial, Arial, sans-serif !important;
+}
+
+.support-title {
+  font-family: mundial, Mundial, Arial, sans-serif !important;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0e0f0f;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.support-section {
+  margin-bottom: 2.25rem;
+}
+
+.support-section-title {
+  font-family: mundial, Mundial, Arial, sans-serif !important;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0e0f0f;
+  margin: 0 0 0.6rem 0;
+  line-height: 1.4;
+}
+
+.support-text {
+  font-family: mundial, Mundial, Arial, sans-serif !important;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #2d3748;
+  margin: 0;
+}
+
+.support-text + .support-text {
+  margin-top: 0.4rem;
+}
+
+.support-link {
+  font-family: mundial, Mundial, Arial, sans-serif !important;
+  color: #4461b1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.support-link:hover {
+  color: #ed6630;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .support-container {
+    padding: 36px 16px 48px 16px;
+  }
+  
+  .support-title {
+    font-size: 2rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .support-section {
+    margin-bottom: 1.75rem;
+  }
+
+  .support-section-title {
+    font-size: 1.1rem;
+  }
+
+  .support-text {
+    font-size: 0.975rem;
+  }
+}

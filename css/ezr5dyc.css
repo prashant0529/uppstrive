@@ -1,0 +1,57 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * mundial:
+ *   - http://typekit.com/eulas/00000000000000007735ee06
+ *   - http://typekit.com/eulas/00000000000000007735ee08
+ *   - http://typekit.com/eulas/00000000000000007735ee0a
+ *   - http://typekit.com/eulas/00000000000000007735ee0c
+ *   - http://typekit.com/eulas/00000000000000007735ee0d
+ *   - http://typekit.com/eulas/00000000000000007735ee0e
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2025-12-02 16:46:49 UTC"}*/
+
+@import url("../css/p.css");
+
+@font-face {
+font-family:"mundial";
+src:url("../assets/images/l.woff2") format("woff2"),url("../assets/images/d.woff") format("woff"),url("../assets/images/a") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"mundial";
+src:url("../assets/images/l_1.woff2") format("woff2"),url("../assets/images/d_1.woff") format("woff"),url("../assets/images/a_1") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"mundial";
+src:url("../assets/images/l_2.woff2") format("woff2"),url("../assets/images/d_2.woff") format("woff"),url("../assets/images/a_2") format("opentype");
+font-display:auto;font-style:italic;font-weight:600;font-stretch:normal;
+}
+
+@font-face {
+font-family:"mundial";
+src:url("../assets/images/l_3.woff2") format("woff2"),url("../assets/images/d_3.woff") format("woff"),url("../assets/images/a_3") format("opentype");
+font-display:auto;font-style:normal;font-weight:600;font-stretch:normal;
+}
+
+@font-face {
+font-family:"mundial";
+src:url("../assets/images/l_4.woff2") format("woff2"),url("../assets/images/d_4.woff") format("woff"),url("../assets/images/a_4") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"mundial";
+src:url("../assets/images/l_5.woff2") format("woff2"),url("../assets/images/d_5.woff") format("woff"),url("../assets/images/a_5") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+.tk-mundial { font-family: "mundial",sans-serif; }

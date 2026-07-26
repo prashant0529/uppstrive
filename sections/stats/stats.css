@@ -1,0 +1,55 @@
+
+/* Dark Bar Trusted By Marquee Styles (Extra Large Logos & Infinite Loop) */
+.trusted-dark-marquee-track {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  width: max-content !important;
+  padding: 16px 0 !important;
+  animation: trustedDarkMarquee 35s linear infinite !important;
+  will-change: transform;
+}
+
+.trusted-dark-marquee-track:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes trustedDarkMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33333%); }
+}
+
+.trusted-dark-card {
+  height: 72px !important;
+  padding: 12px 28px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.trusted-dark-card:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.38) !important;
+}
+
+.trusted-dark-card img {
+  max-height: 52px !important;
+  max-width: 180px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+
+/* Stat Circles Text Color Black Override */
+.omk-JobStatsSection-circleText,
+.omk-JobStatsSection-circleTextEmphasize,
+.css-7d90x3 {
+  color: #0e0f0f !important;
+  font-weight: 700 !important;
+}

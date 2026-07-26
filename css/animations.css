@@ -1,0 +1,518 @@
+/* Animation classes for scroll elements */
+.anim-fade-in-up {
+  opacity: 0 !important;
+  transform: translateY(40px) !important;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.anim-fade-in-up.anim-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Career Tools section cards override */
+.omk-CareerTools-card {
+  opacity: 0 !important;
+  transform: scale(0.85) !important;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.omk-CareerTools-card.anim-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Statistics section circles override */
+.omk-JobStatsSection-circle, 
+.omk-JobStatsSection-circleImage {
+  opacity: 0 !important;
+  transform: scale(0) !important;
+  transition: opacity 1s cubic-bezier(0.34, 1.56, 0.64, 1), transform 1s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.omk-JobStatsSection-circle.anim-active, 
+.omk-JobStatsSection-circleImage.anim-active {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+/* Insights cards — animated via pure JS (see animations.js initInsightsCards)
+   No CSS hidden state here to avoid !important specificity conflicts */
+
+/* CRITICAL: Override the parent reviews section overflow:hidden
+   (.css-1lci24q in styles.css line 373) which was clipping the insights
+   card translateY animation start position */
+.css-1lci24q {
+  overflow: visible !important;
+}
+
+/* But keep the testimonials circle (inside .css-1lci24q) clipped */
+.css-1lci24q .omk-TestimonialsSection-testimonialRow {
+  overflow: hidden !important;
+}
+
+.omk-UppstriveInsights-container {
+  overflow: visible !important;
+}
+
+.omk-UppstriveInsights-card {
+  overflow: visible !important;
+}
+
+/* Hero Section Badge and Match Card animations */
+.css-1to9j1 {
+  opacity: 0 !important;
+  transform: scale(0.85) !important;
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.css-1to9j1.active-badge {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.css-79elbk:hover .css-1to9j1,
+.css-79elbk:active .css-1to9j1 {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.css-1o2cgyt {
+  top: 675px !important;
+  transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.css-1o2cgyt.active-card {
+  top: 170px !important;
+}
+
+.css-13prtt1 {
+  top: -300px !important;
+  transition: top 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.css-13prtt1.active-card {
+  top: 110px !important;
+}
+
+/* Testimonials Slider Row Override */
+.omk-TestimonialsSection-testimonialRow {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform;
+}
+
+.omk-TestimonialsSection-testimonialContainer {
+  transform: none !important;
+  opacity: 1 !important;
+  flex: 0 0 auto !important;
+  width: 100% !important;
+  max-width: 500px !important;
+  margin: 0 16px !important;
+  transition: opacity 0.6s ease !important;
+  box-sizing: border-box !important;
+}
+
+.omk-TestimonialsSection-testimonialContainer .css-j7qwjs {
+  opacity: 0.15 !important;
+  transition: opacity 0.6s ease !important;
+}
+
+.omk-TestimonialsSection-testimonialContainer.active-slide .css-j7qwjs {
+  opacity: 1 !important;
+}
+
+/* Testimonials author image override */
+.omk-TestimonialsSection-image {
+  opacity: 0 !important;
+  transition: opacity 0.6s ease !important;
+}
+
+.omk-TestimonialsSection-image.active-image {
+  opacity: 1 !important;
+}
+
+/* Centering stepper indicators for testimonials slider inside the active circle */
+.css-h2ixdy {
+  left: calc(50% - 210px) !important;
+  transform: translateX(-50%) !important;
+  bottom: 40px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 1199.95px) {
+  .css-h2ixdy {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 20px !important;
+  }
+}
+
+/* Decorative background circle in testimonials section - fix oversized ring */
+.css-1wl2x31 {
+  position: absolute !important;
+  right: -60px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 320px !important;
+  height: 320px !important;
+  pointer-events: none !important;
+  opacity: 0.12 !important;
+  z-index: 0 !important;
+  overflow: visible !important;
+}
+
+.css-1wl2x31 svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .css-1wl2x31 {
+    display: none !important;
+  }
+}
+
+/* Stagger transition delays for child groups */
+.omk-CareerTools-toolContainer > :nth-child(1) { transition-delay: 0s !important; }
+.omk-CareerTools-toolContainer > :nth-child(2) { transition-delay: 0.1s !important; }
+.omk-CareerTools-toolContainer > :nth-child(3) { transition-delay: 0.2s !important; }
+.omk-CareerTools-toolContainer > :nth-child(4) { transition-delay: 0.3s !important; }
+
+.MuiBox-root.css-1tdqy3l > :nth-child(1) { transition-delay: 0s !important; }
+.MuiBox-root.css-1tdqy3l > :nth-child(2) { transition-delay: 0.15s !important; }
+.MuiBox-root.css-1tdqy3l > :nth-child(3) { transition-delay: 0.3s !important; }
+.MuiBox-root.css-1tdqy3l > :nth-child(4) { transition-delay: 0.45s !important; }
+
+.omk-UppstriveInsights-container > :nth-child(1) { transition-delay: 0s !important; }
+.omk-UppstriveInsights-container > :nth-child(2) { transition-delay: 0.15s !important; }
+.omk-UppstriveInsights-container > :nth-child(3) { transition-delay: 0.3s !important; }
+
+/* Mobile slider layout for Insights section */
+@media (max-width: 899px) {
+  .css-1sjls72 .omk-UppstriveInsights-container {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;   /* allow vertical animation */
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: 8px !important;   /* space for translateY animation */
+    gap: 16px !important;
+  }
+  .css-1sjls72 .omk-UppstriveInsights-container::-webkit-scrollbar {
+    display: none !important;
+  }
+  .css-1sjls72 .omk-UppstriveInsights-container .omk-UppstriveInsights-card {
+    flex: 0 0 85% !important;
+    scroll-snap-align: center !important;
+    box-sizing: border-box !important;
+    min-width: 280px !important;
+  }
+  /* On mobile: show all cards without waiting for scroll (mobile doesn't scroll vertically to insights) */
+  .css-1sjls72 .omk-UppstriveInsights-container .omk-UppstriveInsights-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.5s ease, transform 0.5s ease !important;
+  }
+  .css-1sjls72 .omk-UppstriveInsights-container .omk-UppstriveInsights-card .omk-UppstriveInsights-image {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 222px !important;
+    object-fit: cover !important;
+    border-radius: 20px !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
+/* Infinite Marquee for Trusted By section logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.FMT__container__contents {
+  display: flex !important;
+  width: max-content !important;
+  animation: marquee 30s linear infinite !important;
+}
+
+/* Modal Popup Form Style */
+.lead-modal-overlay,
+.lead-modal-backdrop {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(14, 15, 15, 0.45) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+}
+
+.lead-modal-overlay.modal-open,
+.lead-modal-backdrop.modal-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+.lead-modal-container {
+  background: #ffffff !important;
+  width: 90% !important;
+  max-width: 410px !important;
+  border-radius: 16px !important;
+  box-shadow: 0px 16px 36px rgba(0, 0, 0, 0.22) !important;
+  padding: 20px 24px !important;
+  box-sizing: border-box !important;
+  transform: scale(0.92) !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.lead-modal-overlay.modal-open .lead-modal-container,
+.lead-modal-backdrop.modal-open .lead-modal-container {
+  transform: scale(1) !important;
+}
+
+.lead-modal-close,
+.lead-modal-close-btn {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  background: #f1f2f3 !important;
+  border: none !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 50% !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  color: #555 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: background-color 0.2s, color 0.2s !important;
+}
+
+.lead-modal-close:hover,
+.lead-modal-close-btn:hover {
+  background-color: #e0e2e5 !important;
+  color: #000 !important;
+}
+
+.lead-modal-header {
+  margin-bottom: 14px !important;
+  padding-right: 20px !important;
+}
+
+.lead-modal-title {
+  font-family: Mundial, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 1.25rem !important;
+  color: #0e0f0f !important;
+  margin: 0 0 4px 0 !important;
+}
+
+.lead-modal-subtitle {
+  font-family: Mundial, Arial, sans-serif !important;
+  font-size: 0.85rem !important;
+  color: #666 !important;
+  margin: 0 !important;
+  line-height: 1.35 !important;
+}
+
+.lead-modal-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+.lead-modal-form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  margin-bottom: 0 !important;
+}
+
+.lead-modal-label {
+  font-family: Mundial, Arial, sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  color: #333333 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.lead-modal-input,
+.lead-modal-select,
+.lead-modal-textarea {
+  font-family: Mundial, Arial, sans-serif !important;
+  font-size: 0.9rem !important;
+  padding: 8px 12px !important;
+  border: 1px solid #d0d5dd !important;
+  border-radius: 8px !important;
+  background-color: #f9fafb !important;
+  color: #0e0f0f !important;
+  outline: none !important;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.lead-modal-input:focus,
+.lead-modal-select:focus,
+.lead-modal-textarea:focus {
+  border-color: #ed6630 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(237, 102, 48, 0.15) !important;
+}
+
+.lead-modal-textarea {
+  resize: vertical !important;
+  min-height: 52px !important;
+  max-height: 100px !important;
+}
+
+.lead-modal-submit-btn {
+  font-family: Mundial, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.95rem !important;
+  color: #ffffff !important;
+  background-color: #ed6630 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s !important;
+  margin-top: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.lead-modal-submit-btn:hover {
+  background-color: #354e93 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(68, 97, 177, 0.25) !important;
+}
+
+.lead-modal-submit-btn:active {
+  transform: translateY(0) !important;
+}
+
+/* Success State Styles */
+.lead-modal-success {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  padding: 24px 0 !important;
+  animation: fadeIn 0.4s ease !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.lead-modal-success-icon {
+  width: 64px !important;
+  height: 64px !important;
+  background-color: rgba(76, 175, 80, 0.1) !important;
+  color: #4caf50 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 16px !important;
+}
+
+/* Dark Bar Trusted By Marquee Styles (Extra Large Logos & Infinite Loop) */
+.trusted-dark-marquee-track {
+  display: flex !important;
+  align-items: center !important;
+  gap: 32px !important;
+  width: max-content !important;
+  padding: 16px 0 !important;
+  animation: trustedDarkMarquee 35s linear infinite !important;
+  will-change: transform;
+}
+
+.trusted-dark-marquee-track:hover {
+  animation-play-state: paused !important;
+}
+
+@keyframes trustedDarkMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33333%); }
+}
+
+.trusted-dark-card {
+  height: 72px !important;
+  padding: 12px 28px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.trusted-dark-card:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.38) !important;
+}
+
+.trusted-dark-card img {
+  max-height: 52px !important;
+  max-width: 180px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* Stat Circles Text Color Black Override */
+.omk-JobStatsSection-circleText,
+.omk-JobStatsSection-circleTextEmphasize,
+.css-7d90x3 {
+  color: #0e0f0f !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================
+   Mobile UI Fixes for Hero Section (< 768px)
+   ========================================== */
+@media (max-width: 767px) {
+  .css-1lv4pw2 {
+    flex-direction: column !important;
+  }
+
+  .css-ubcioi {
+    display: none !important;
+  }
+}
+

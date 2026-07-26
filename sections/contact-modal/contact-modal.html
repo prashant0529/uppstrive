@@ -1,0 +1,39 @@
+<div id="leadModal" class="lead-modal-overlay">
+  <div class="lead-modal-container">
+    <button id="closeModalBtn" class="lead-modal-close" aria-label="Close modal">&times;</button>
+    <div class="lead-modal-content-wrapper" id="modalContentWrapper">
+      <div class="lead-modal-header">
+        <h3 class="lead-modal-title">Get Started</h3>
+        <p class="lead-modal-subtitle">Let's discuss how UppStrive can accelerate your business growth.</p>
+      </div>
+      <form class="lead-modal-form" id="leadForm">
+        <div class="lead-modal-form-group">
+          <label class="lead-modal-label" for="leadName">Full Name</label>
+          <input class="lead-modal-input" type="text" id="leadName" required placeholder="John Doe" />
+        </div>
+        <div class="lead-modal-form-group">
+          <label class="lead-modal-label" for="leadEmail">Email Address</label>
+          <input class="lead-modal-input" type="email" id="leadEmail" required placeholder="john@company.com" />
+        </div>
+        <div class="lead-modal-form-group">
+          <label class="lead-modal-label" for="leadPhone">Phone Number</label>
+          <input class="lead-modal-input" type="tel" id="leadPhone" placeholder="+1 (555) 000-0000" />
+        </div>
+        <div class="lead-modal-form-group">
+          <label class="lead-modal-label" for="leadService">Service Needed</label>
+          <select class="lead-modal-select" id="leadService" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="marketing">Digital Marketing &amp; Branding</option>
+            <option value="it">Innovative IT &amp; Custom Software</option>
+            <option value="both">Both Marketing &amp; IT Solutions</option>
+          </select>
+        </div>
+        <div class="lead-modal-form-group">
+          <label class="lead-modal-label" for="leadMessage">Message</label>
+          <textarea class="lead-modal-textarea" id="leadMessage" rows="2" placeholder="Tell us about your project/goals..."></textarea>
+        </div>
+        <button class="lead-modal-submit-btn" type="submit">Submit Request</button>
+      </form>
+    </div>
+  </div>
+</div>

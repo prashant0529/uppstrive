@@ -1,0 +1,13 @@
+/* Services Section Styles */
+.omk-CareerTools-title {
+  font-weight: 700;
+}
+.omk-CareerTools-textEmphasis {
+  color: #ed6630;
+}
+.omk-CareerTools-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.omk-CareerTools-card:hover {
+  transform: translateY(-4px);
+}
