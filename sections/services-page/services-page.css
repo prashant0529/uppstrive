@@ -1,0 +1,652 @@
+/* Container padding spacing */
+.services-page-section {
+    padding: 60px 24px;
+}
+
+/* Red accent accent styling */
+.services-page-header {
+    position: relative;
+    padding-top: 16px;
+    margin-bottom: 48px;
+}
+
+.services-page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #E8401C;
+    /* Main Red Accent */
+}
+
+.services-page-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0e0f0f;
+    margin: 12px 0 0 0;
+}
+
+.services-page-subtitle {
+    color: #E8401C;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Responsive Grid layout */
+.services-page-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 900px) {
+    .services-page-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card basic container */
+.services-page-card {
+    background-color: #f4f5f6;
+    /* Subtle grey background */
+    padding: 40px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-page-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+/* Icons styles */
+.services-page-card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 24px;
+    color: #518ba6;
+    /* Line icon colors */
+}
+
+.services-page-card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    color: #0e0f0f;
+}
+
+.services-page-card-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #61676e;
+    margin: 0;
+}
+
+/* Highlighted (Red Card) styling overrides */
+.services-page-card.highlighted {
+    background-color: #E8401C;
+    /* Main Red Accent */
+    color: #ffffff;
+}
+
+.services-page-card.highlighted .services-page-card-icon {
+    color: #ffffff;
+}
+
+.services-page-card.highlighted .services-page-card-title {
+    color: #ffffff;
+}
+
+.services-page-card.highlighted .services-page-card-desc {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* .services-page-card-arrow {
+    margin-top: auto;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+} */
+.services-page-card-arrow {
+    margin-top: auto;
+    width: 24px;
+    height: 24px;
+    color: #ffffff;
+    opacity: 0;
+    /* Normal class par hidden rahega */
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Jab parent element highlighted ho tabhi arrow show hoga */
+.services-page-card.highlighted .services-page-card-arrow {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* ================= SERVICE DETAIL MODAL OVERLAY ================= */
+.service-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 15, 15, 0.6);
+    /* Semi-transparent backdrop */
+    z-index: 9999;
+    display: none;
+    /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    padding: 16px;
+}
+
+.service-modal-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    border-radius: 12px;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    animation: modalSlideUp 0.3s ease;
+}
+
+@keyframes modalSlideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Header (Red corporate layout) */
+.service-modal-header {
+    background-color: #E8401C;
+    /* Corporate Red */
+    color: #ffffff;
+    padding: 32px 40px;
+    position: relative;
+}
+
+.service-modal-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.service-modal-close-btn:hover {
+    opacity: 1;
+}
+
+.service-modal-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 8px 0 4px 0;
+}
+
+.service-modal-subtitle {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+
+/* Modal Body */
+.service-modal-body {
+    padding: 40px;
+}
+
+.service-modal-section-title {
+    color: #E8401C;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 28px;
+}
+
+.service-modal-section-title::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background-color: #E8401C;
+}
+
+.service-modal-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.service-modal-desc {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 0 0 24px 0;
+}
+
+/* Timeline/Steps Layout */
+.service-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    margin-top: 16px;
+}
+
+.service-timeline-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+/* Vertical line connecting step circles */
+.service-timeline-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    bottom: -24px;
+    width: 2px;
+    border-left: 2px dashed #e2e8f0;
+}
+
+.service-timeline-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffebe9;
+    /* Light red overlay */
+    color: #E8401C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.service-timeline-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-timeline-step-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0e0f0f;
+    margin: 0 0 4px 0;
+}
+
+.service-timeline-step-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #61676e;
+    margin: 0;
+}
+
+/* Custom Scrollbar for Modal Container */
+.service-modal-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.service-modal-container::-webkit-scrollbar-track {
+    background: #f1f2f3;
+    border-radius: 0 12px 12px 0;
+}
+
+.service-modal-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.service-modal-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Modal Divider */
+.service-modal-divider {
+    border: 0;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 40px 0 24px 0;
+}
+
+/* Footer CTA container */
+.service-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 8px;
+}
+
+.service-modal-footer-text {
+    font-size: 1.05rem;
+    color: #4a5568;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Red CTA Button with paper-plane icon */
+.service-modal-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #E8401C;
+    /* Brand Red */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.service-modal-cta-btn:hover {
+    background-color: #c93514;
+    transform: translateY(-1px);
+}
+
+.service-modal-cta-btn svg {
+    margin-left: 4px;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+.service-modal-cta-btn:hover svg {
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 600px) {
+    .service-modal-footer {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+}
+
+/* ================= SERVICES TABBING LAYOUT ================= */
+.services-tabs-container {
+    display: flex;
+    border-bottom: 2px solid #E8401C;
+    /* Baseline Red Line */
+    margin-bottom: 40px;
+    padding-left: 4px;
+    overflow-x: auto;
+}
+
+/* Outer Tab - border dynamic color handles slanted edges */
+.services-tab {
+    position: relative;
+    cursor: pointer;
+    background-color: #cbd5e1;
+    /* Inactive Outline color */
+    clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+    /* Slanted Cut shape */
+    transition: all 0.25s ease;
+    margin-right: 12px;
+    /* Spacing gap between tabs */
+    padding: 0;
+    min-width: 175px;
+    z-index: 1;
+}
+
+/* Inner Tab - holds styling, background and text spacing */
+.services-tab-inner {
+    background-color: #f8fafc;
+    /* Inactive inner block background */
+    color: #64748b;
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 0.98rem;
+    clip-path: polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px);
+    margin: 1.5px;
+    /* Border Outline thickness */
+    margin-bottom: 0;
+    /* Bottom merges with baseline */
+    height: calc(100% - 1.5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+/* Hover state styles */
+.services-tab:hover {
+    background-color: #E8401C;
+    /* Red outline on hover */
+}
+
+.services-tab:hover .services-tab-inner {
+    color: #E8401C;
+    background-color: #f1f5f9;
+}
+
+/* Active/Selected Highlighted tab style */
+.services-tab.active {
+    background-color: #E8401C;
+    /* Solid Red outline */
+    z-index: 2;
+}
+
+.services-tab.active .services-tab-inner {
+    background-color: #E8401C;
+    /* Solid Red background */
+    color: #ffffff;
+}
+
+.services-tab.active:hover .services-tab-inner {
+    color: #ffffff;
+    background-color: #E8401C;
+}
+
+/* ================= SERVICES PAGE HERO BANNER ================= */
+.services-hero-banner {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    /* Red-gradient overlay over generated desk workspace image */
+    background-image: linear-gradient(135deg, rgba(14, 15, 15, 0.85) 0%, rgba(232, 64, 28, 0.4) 100%), url('../../assets/images/services-hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 60px;
+    border-radius: 0 0 16px 16px;
+    overflow: hidden;
+}
+
+.services-hero-content {
+    max-width: 800px;
+    z-index: 2;
+}
+
+.services-hero-subtitle {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    display: block;
+    margin-bottom: 12px;
+    font-family: Mundial, sans-serif;
+}
+
+.services-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -1px;
+    font-family: Mundial, sans-serif;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .services-hero-banner {
+        height: 280px;
+        margin-bottom: 40px;
+    }
+
+    .services-hero-title {
+        font-size: 2.4rem;
+    }
+}
+
+/* ================= SERVICES PAGE WHY CHOOSE US INFO SECTION ================= */
+.services-info-section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.services-info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.services-info-image-col {
+    width: 100%;
+}
+
+.services-info-img {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.services-info-text-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.services-info-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0E0F0F;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: Mundial, sans-serif;
+}
+
+.services-info-desc {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #64748B;
+    margin-bottom: 24px;
+    font-family: Mundial, sans-serif;
+}
+
+.services-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 32px 0;
+    width: 100%;
+}
+
+.services-info-list-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    color: #0E0F0F;
+    margin-bottom: 16px;
+    font-family: Mundial, sans-serif;
+    font-weight: 600;
+}
+
+.services-info-check {
+    color: #E8401C; /* Brand Red checkmark */
+    flex-shrink: 0;
+}
+
+.services-info-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E8401C; /* Brand Red */
+    color: #ffffff;
+    padding: 14px 36px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: Mundial, sans-serif;
+}
+
+.services-info-btn:hover {
+    background-color: #d13515;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(232, 64, 28, 0.25);
+}
+
+/* Mobile Responsiveness for info section */
+@media (max-width: 900px) {
+    .services-info-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .services-info-title {
+        font-size: 2.2rem;
+    }
+    .services-info-section {
+        padding: 50px 0;
+    }
+}

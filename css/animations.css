@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 /* Animation classes for scroll elements */
 .anim-fade-in-up {
   opacity: 0 !important;
