@@ -1,0 +1,433 @@
+<section class="services-page-section">
+    <!-- Section Title & Subtitle -->
+    <div class="services-page-header">
+        <span class="services-page-subtitle">We work with you, not for you</span>
+        <h1 class="services-page-title">Services.</h1>
+    </div>
+
+    <!-- 3 Folder Tabs Layout -->
+    <div class="services-tabs-container">
+        <div class="services-tab active" onclick="switchTab(this, 'marketing')">
+            <div class="services-tab-inner">Digital Marketing</div>
+        </div>
+        <div class="services-tab" onclick="switchTab(this, 'design')">
+            <div class="services-tab-inner">IT & Design</div>
+        </div>
+        <div class="services-tab" onclick="switchTab(this, 'others')">
+            <div class="services-tab-inner">Others</div>
+        </div>
+    </div>
+
+    <!-- Services Grid (18 cards) -->
+    <div class="services-page-grid">
+
+        <!-- ================= TAB 1: DIGITAL MARKETING CARDS ================= -->
+        <!-- Card 1 -->
+        <div class="services-page-card highlighted" onclick="selectCard(this)" data-service-id="m-digital-strategy"
+            data-category="marketing">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                        d="M19 22H5c0-3 1-5 3-6l-1-2c-1.5-2 0-5 2-6l3-4 1 2 4 1-1 3 3 2c1.5 2 .5 5-1 7l-2 3c2 1 3 3 3 6z" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Digital Strategy</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="m-ux-design"
+            data-category="marketing">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
+                    <line x1="2" y1="8" x2="22" y2="8" />
+                    <circle cx="6" cy="5" r="0.5" />
+                    <circle cx="9" cy="5" r="0.5" />
+                    <circle cx="12" cy="5" r="0.5" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">UX Design</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="m-product-design"
+            data-category="marketing">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <line x1="12" y1="18" x2="12" y2="22" />
+                    <line x1="9" y1="22" x2="15" y2="22" />
+                    <rect x="3" y="3" width="18" height="13" rx="2" />
+                    <path d="M7 10l3-3 3 3 4-4" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Product Design</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="m-content-strategy"
+            data-category="marketing">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                    <line x1="9" y1="9" x2="15" y2="9" />
+                    <line x1="9" y1="13" x2="15" y2="13" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Content Strategy</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="m-design-concept"
+            data-category="marketing">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M17 3a2.82 2.82 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+                    <line x1="15" y1="5" x2="19" y2="9" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Design & Concept</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="m-social-media"
+            data-category="marketing">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Social Media</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <!-- ================= TAB 2: IT & DESIGN CARDS ================= -->
+        <!-- Card 1 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="d-digital-strategy"
+            data-category="design" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                        d="M19 22H5c0-3 1-5 3-6l-1-2c-1.5-2 0-5 2-6l3-4 1 2 4 1-1 3 3 2c1.5 2 .5 5-1 7l-2 3c2 1 3 3 3 6z" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Digital Strategy (IT)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="d-ux-design" data-category="design"
+            style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
+                    <line x1="2" y1="8" x2="22" y2="8" />
+                    <circle cx="6" cy="5" r="0.5" />
+                    <circle cx="9" cy="5" r="0.5" />
+                    <circle cx="12" cy="5" r="0.5" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">UX Design (IT)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="d-product-design"
+            data-category="design" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <line x1="12" y1="18" x2="12" y2="22" />
+                    <line x1="9" y1="22" x2="15" y2="22" />
+                    <rect x="3" y="3" width="18" height="13" rx="2" />
+                    <path d="M7 10l3-3 3 3 4-4" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Product Design (IT)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="d-content-strategy"
+            data-category="design" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                    <line x1="9" y1="9" x2="15" y2="9" />
+                    <line x1="9" y1="13" x2="15" y2="13" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Content Strategy (IT)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="d-design-concept"
+            data-category="design" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M17 3a2.82 2.82 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+                    <line x1="15" y1="5" x2="19" y2="9" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Design & Concept (IT)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="d-social-media"
+            data-category="design" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Social Media (IT)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <!-- ================= TAB 3: OTHERS CARDS ================= -->
+        <!-- Card 1 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="o-digital-strategy"
+            data-category="others" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                        d="M19 22H5c0-3 1-5 3-6l-1-2c-1.5-2 0-5 2-6l3-4 1 2 4 1-1 3 3 2c1.5 2 .5 5-1 7l-2 3c2 1 3 3 3 6z" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Digital Strategy (Others)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="o-ux-design" data-category="others"
+            style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <rect x="2" y="3" width="20" height="18" rx="2" ry="2" />
+                    <line x1="2" y1="8" x2="22" y2="8" />
+                    <circle cx="6" cy="5" r="0.5" />
+                    <circle cx="9" cy="5" r="0.5" />
+                    <circle cx="12" cy="5" r="0.5" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">UX Design (Others)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="o-product-design"
+            data-category="others" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <line x1="12" y1="18" x2="12" y2="22" />
+                    <line x1="9" y1="22" x2="15" y2="22" />
+                    <rect x="3" y="3" width="18" height="13" rx="2" />
+                    <path d="M7 10l3-3 3 3 4-4" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Product Design (Others)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="o-content-strategy"
+            data-category="others" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
+                    <line x1="9" y1="9" x2="15" y2="9" />
+                    <line x1="9" y1="13" x2="15" y2="13" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Content Strategy (Others)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="o-design-concept"
+            data-category="others" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M17 3a2.82 2.82 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
+                    <line x1="15" y1="5" x2="19" y2="9" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Design & Concept (Others)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="services-page-card" onclick="selectCard(this)" data-service-id="o-social-media"
+            data-category="others" style="display: none;">
+            <div class="services-page-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                </svg>
+            </div>
+            <h3 class="services-page-card-title">Social Media (Others)</h3>
+            <p class="services-page-card-desc">Lorem ipsum dolor sit amet elit. Tempore corrupti temporibus fuga earum
+                asperiores.</p>
+            <div class="services-page-card-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= DYNAMIC SERVICE DETAIL MODAL ================= -->
+<div id="serviceDetailModal" class="service-modal-overlay" onclick="closeServiceModalOnOverlay(event)">
+    <div class="service-modal-container">
+        <!-- Close Button -->
+        <button class="service-modal-close-btn" onclick="closeServiceModal()">&times;</button>
+
+        <!-- Header -->
+        <div class="service-modal-header">
+            <div class="service-modal-subtitle" id="modalServiceSubtitle">Subtitle</div>
+            <h2 class="service-modal-title" id="modalServiceTitle">Title</h2>
+        </div>
+        <!-- Body -->
+        <div class="service-modal-body">
+            <!-- About Section -->
+            <div class="service-modal-section-title">About this service</div>
+            <p class="service-modal-desc" id="modalServiceAbout">Description text goes here...</p>
+
+            <!-- How It Works Section -->
+            <div class="service-modal-section-title">How it works</div>
+            <div class="service-timeline" id="modalServiceTimeline">
+                <!-- Dynamic timeline steps will be injected here -->
+            </div>
+
+            <!-- Divider Line -->
+            <hr class="service-modal-divider">
+
+            <!-- Footer CTA Section -->
+            <div class="service-modal-footer">
+                <p class="service-modal-footer-text">Like the sound of this? Let's talk specifics.</p>
+                <a href="#" class="service-modal-cta-btn" onclick="closeServiceModal(); openLeadModal(event)">
+                    Start this project
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

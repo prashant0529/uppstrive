@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Services - UppStrive</title>
+    <link rel="icon" href="assets/icons/favicon.png" type="image/png" />
+    <!-- Global CSS links -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/ezr5dyc.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <!-- New Section Specific CSS -->
+    <link rel="stylesheet" href="sections/services-page/services-page.css" />
+</head>
+
+<body>
+    <div class="MuiContainer-root css-je4r4">
+        <!-- Section 1: Header Navigation -->
+        <div data-section="header"></div>
+
+        <!-- Main Content Container Wrapper -->
+        <div class="MuiContainer-root MuiContainer-maxWidthXl css-1uzv71">
+            <div class="MuiStack-root css-j7qwjs">
+                <div class="services-hero-banner animate-fade-in">
+                    <div class="services-hero-content">
+                        <span class="services-hero-subtitle">WE ARE DEDICATED</span>
+                        <h1 class="services-hero-title">Our Services</h1>
+                    </div>
+                </div>
+                <!-- Section: Custom Services List -->
+                <div data-section="services-page"></div>
+
+                <!-- [NEW] Why Choose Us Info Section (After Cards) -->
+                <div class="services-info-section">
+                    <div class="services-info-container">
+                        <div class="services-info-image-col">
+                            <img src="assets/images/services-why-us.png" alt="Collaborative Teamwork" class="services-info-img" />
+                        </div>
+                        <div class="services-info-text-col">
+                            <h2 class="services-info-title">Why Choose Us To Join Our Work?</h2>
+                            <p class="services-info-desc">
+                                We combine data-driven marketing strategy with world-class software engineering. No more juggling between developers who don't understand marketing and marketers who don't understand tech.
+                            </p>
+                            <ul class="services-info-list">
+                                <li class="services-info-list-item">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="services-info-check">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Transparent, performance-based success metrics</span>
+                                </li>
+                                <li class="services-info-list-item">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="services-info-check">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Custom, developer-ready software architectures</span>
+                                </li>
+                                <li class="services-info-list-item">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="services-info-check">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Unified execution ensuring design and tech alignment</span>
+                                </li>
+                            </ul>
+                            <button class="services-info-btn" onclick="openLeadModal(event)">
+                                Let's Get Started &rarr;
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section: Footer -->
+            <div data-section="footer"></div>
+        </div>
+
+        <!-- Section: Lead Generation Modal -->
+        <div data-section="contact-modal"></div>
+    </div>
+
+    <!-- Modular Section Loader (UJS) & Section Data -->
+    <script src="js/sections-data.js"></script>
+    <script src="js/ujs.js"></script>
+    <script src="js/animations.js?v=2"></script>
+
+    <!-- Script to toggle active cards dynamically -->
+    <!-- <script>
+        function selectCard(card) {
+            // Remove 'highlighted' class from all cards
+            document.querySelectorAll('.services-page-card').forEach(c => {
+                c.classList.remove('highlighted');
+            });
+            // Add 'highlighted' class to the clicked card
+            card.classList.add('highlighted');
+        }
+    </script> -->
+    <!-- Script to toggle active cards & show details popup dynamically -->
+    <script>
+        // URL cleanup: remove '.html' from address bar dynamically
+        if (window.location.pathname.endsWith('.html')) {
+            const cleanPath = window.location.pathname.replace('.html', '');
+            window.history.replaceState(null, '', cleanPath);
+        }
+
+        // 1. Data Store containing detailed specs for each service (18 separate customizable blocks)
+        const SERVICES_DATA = {
+            // ================= TAB 1: DIGITAL MARKETING CARDS (prefix 'm-') =================
+            "m-digital-strategy": {
+                title: "Digital Strategy",
+                subtitle: "PLANNING & POSITIONING",
+                about: "We start every engagement here. Before a single pixel is designed, we map your market, your audience, and your competitors, then translate that into a digital strategy your whole team can rally behind — one that ties every future decision back to a measurable business outcome.",
+                steps: [
+                    { title: "Discover", desc: "Stakeholder interviews, audience research, and a full audit of what you already have.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>` },
+                    { title: "Define", desc: "We turn findings into a positioning statement and a prioritised set of goals.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>` },
+                    { title: "Plan", desc: "A channel-by-channel roadmap with timelines, owners, and success metrics.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>` },
+                    { title: "Review", desc: "We present the strategy, pressure-test it with your team, and lock the plan.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                ]
+            },
+            "m-ux-design": {
+                title: "UX Design",
+                subtitle: "RESEARCH & WIREFRAMING",
+                about: "We design interfaces that are intuitive, easy to navigate, and conversion-focused. Our UX design process ensures that users can easily find what they need, leading to higher satisfaction and increased customer conversions.",
+                steps: [
+                    { title: "Research", desc: "Understanding user behavior, creating personas, and analyzing user flows.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>` },
+                    { title: "Wireframe", desc: "Creating low-fidelity skeletal frameworks of your web pages and screens.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>` },
+                    { title: "Prototype", desc: "Interactive mockups that simulate real user interactions and flows.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>` },
+                    { title: "Test", desc: "Gathering user feedback and iterating to solve usability issues.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                ]
+            },
+            "m-product-design": {
+                title: "Product Design",
+                subtitle: "CONCEPT & PROTOTYPING",
+                about: "We bring your digital product ideas to life with stunning visuals and interactive prototypes. From mobile applications to SaaS platforms, we design products that users love.",
+                steps: [
+                    { title: "Ideate", desc: "Brainstorming concepts, features, and visual directions.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>` },
+                    { title: "Design", desc: "Creating high-fidelity UI designs with custom assets and visual systems.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path></svg>` },
+                    { title: "Prototype", desc: "Building interactive click-throughs to validate features and layout.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>` },
+                    { title: "Handoff", desc: "Providing developer-ready design assets, specs, and components.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                ]
+            },
+            "m-content-strategy": {
+                title: "Content Strategy",
+                subtitle: "COPYWRITING & SEO",
+                about: "Words are the lifeblood of conversions. We plan, write, and optimize high-quality content that drives traffic, engages your audience, and converts visitors into loyal customers.",
+                steps: [
+                    { title: "Audit", desc: "Reviewing existing content performance, keyword rankings, and gaps.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>` },
+                    { title: "Plan", desc: "Creating a content calendar, targeting valuable user search intents.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>` },
+                    { title: "Write", desc: "Drafting search-optimized copy that engages and converts.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>` },
+                    { title: "Distribute", desc: "Publishing, tracking performance, and updating content dynamically.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                ]
+            },
+            "m-design-concept": {
+                title: "Design & Concept",
+                subtitle: "BRANDING & IDENTITY",
+                about: "We establish a cohesive brand identity that sets you apart from competitors. From logos to color schemes, we build visual languages that tell your story.",
+                steps: [
+                    { title: "Brief", desc: "Defining your brand values, voice, and unique market positioning.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>` },
+                    { title: "Concepts", desc: "Developing logo marks, typography pairings, and palettes.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path></svg>` },
+                    { title: "Refine", desc: "Polishing the chosen concept based on feedback.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>` },
+                    { title: "Guidelines", desc: "Compiling a comprehensive brand book for marketing consistency.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                ]
+            },
+            "m-social-media": {
+                title: "Social Media",
+                subtitle: "COMMUNITY & CAMPAIGNS",
+                about: "We grow your brand presence and engage audiences across social channels. From daily posts to viral campaigns, we connect your business with users where they hang out.",
+                steps: [
+                    { title: "Strategy", desc: "Picking key channels, content pillars, and tone of voice.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>` },
+                    { title: "Create", desc: "Producing high-quality reels, posts, graphics, and video scripts.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>` },
+                    { title: "Engage", desc: "Monitoring comment sections, building communities, and starting conversations.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>` },
+                    { title: "Optimize", desc: "Analyzing weekly analytics to double down on what works.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                ]
+            },
+
+            // ================= TAB 2: IT & DESIGN CARDS (prefix 'd-') =================
+            "d-digital-strategy": {
+                title: "IT Digital Strategy",
+                subtitle: "SYSTEM ARCHITECTURE",
+                about: "Designing system software strategies, choosing infrastructure tech stacks, and cloud migrations blueprints.",
+                steps: [
+                    { title: "Audit Tech", desc: "Analyzing your current hosting and system capabilities.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                ]
+            },
+            "d-ux-design": {
+                title: "Software UX Design",
+                subtitle: "APP INTERACTION & FLOWS",
+                about: "Complex application dashboards, SaaS layouts, and user interactive flows built for software systems.",
+                steps: [
+                    { title: "Wireframes", desc: "Creating low-fi UI blueprints of web/mobile apps.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                ]
+            },
+            "d-product-design": {
+                title: "IT Product Design",
+                subtitle: "SaaS & APP LAYOUTS",
+                about: "Creating full software UI assets, interface components design, and interactive click-through prototypes.",
+                steps: [
+                    { title: "UI Mockups", desc: "High-fidelity mockups of screens.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                ]
+            },
+            "d-content-strategy": {
+                title: "Software Documentation",
+                subtitle: "API & WIKIS",
+                about: "Organizing readable technical user guides, API references, and developer documentation systems.",
+                steps: [
+                    { title: "API Audit", desc: "Reviewing endpoint formats and responses.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                ]
+            },
+            "d-design-concept": {
+                title: "Tech Concept Design",
+                subtitle: "APP BLUEPRINTS",
+                about: "Validating technology logic concepts, building system prototypes, and drafting software flows.",
+                steps: [
+                    { title: "Logical Design", desc: "Mapping DB schemas and services relations.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5M17 19H9.5"/></svg>` }
+                ]
+            },
+            "d-social-media": {
+                title: "Tech Communication",
+                subtitle: "DEV RELATIONS",
+                about: "Handling community channels like Discord, developer forums, and open-source updates support.",
+                steps: [
+                    { title: "Setup Forum", desc: "Initializing dev support ticket channels.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                ]
+            },
+
+            // ================= TAB 3: OTHERS CARDS (prefix 'o-') =================
+            "o-digital-strategy": {
+                title: "Other Digital Strategy",
+                subtitle: "MISCELLANEOUS CONSULTING",
+                about: "Custom business strategy consultations, workflow upgrades, and automation solutions planning.",
+                steps: [
+                    { title: "First Meeting", desc: "Understanding the unique goals of your company.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                ]
+            },
+            "o-ux-design": {
+                title: "Other UX Consulting",
+                subtitle: "USABILITY TESTING",
+                about: "Performing third-party audits of your existing platforms to identify critical conversion bottlenecks.",
+                steps: [
+                    { title: "Auditing", desc: "Running user recordings and heatmaps on live apps.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                ]
+            },
+            "o-product-design": {
+                title: "Other Product Design",
+                subtitle: "CUSTOM GRAPHICS",
+                about: "Designing pitch decks, presentation slides, and custom illustrations for conferences.",
+                steps: [
+                    { title: "Draft Layout", desc: "Structuring presentation slides flow.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                ]
+            },
+            "o-content-strategy": {
+                title: "Other Copywriting",
+                subtitle: "EMAIL & SALES COPY",
+                about: "Drafting high-converting email sequences, newsletters, and cold sales outreach templates.",
+                steps: [
+                    { title: "Sequence Flow", desc: "Mapping user triggers for automated emails.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                ]
+            },
+            "o-design-concept": {
+                title: "Other Visual Concepts",
+                subtitle: "MERCHANDISE & PRINTS",
+                about: "Custom clothing prints design, packaging design, and physical marketing merchandise assets.",
+                steps: [
+                    { title: "Mockup prints", desc: "Placing vector arts on package models.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                ]
+            },
+            "o-social-media": {
+                title: "Other Communities",
+                subtitle: "EVENT MANAGEMENT",
+                about: "Coordinating webinars, online summits, and digital community launch events.",
+                steps: [
+                    { title: "Schedule", desc: "Structuring speakers and platform streaming assets.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                ]
+            }
+        };
+
+        // 2. Select card function (active toggle & popup open)
+        function selectCard(card) {
+            document.querySelectorAll('.services-page-card').forEach(c => c.classList.remove('highlighted'));
+            card.classList.add('highlighted');
+
+            const id = card.getAttribute('data-service-id');
+            const data = SERVICES_DATA[id];
+            if (!data) return;
+
+            document.getElementById('modalServiceTitle').innerText = data.title;
+            document.getElementById('modalServiceSubtitle').innerText = data.subtitle;
+            document.getElementById('modalServiceAbout').innerText = data.about;
+
+            let stepsHtml = '';
+            data.steps.forEach(step => {
+                stepsHtml += `
+            <div class="service-timeline-item">
+                <div class="service-timeline-icon">
+                    ${step.icon}
+                </div>
+                <div class="service-timeline-content">
+                    <h4 class="service-timeline-step-title">${step.title}</h4>
+                    <p class="service-timeline-step-desc">${step.desc}</p>
+                </div>
+            </div>
+          `;
+            });
+            document.getElementById('modalServiceTimeline').innerHTML = stepsHtml;
+
+            // Open popup with background scroll lock
+            document.getElementById('serviceDetailModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 3. Close modal helper functions
+        function closeServiceModal() {
+            document.getElementById('serviceDetailModal').style.display = 'none';
+            document.body.style.overflow = ''; // Unlock background scroll
+        }
+
+        function closeServiceModalOnOverlay(event) {
+            if (event.target.id === 'serviceDetailModal') {
+                closeServiceModal();
+            }
+        }
+
+        // 4. Open Lead generation modal helper
+        function openLeadModal(e) {
+            if (e) e.preventDefault();
+            const leadModal = document.getElementById('leadModal');
+            if (leadModal) {
+                leadModal.classList.add('modal-open');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Tab switching filter logic
+        function switchTab(tabElement, category) {
+            // Tab active classes toggle
+            document.querySelectorAll('.services-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            tabElement.classList.add('active');
+
+            // Hide/Show matching cards grid items
+            document.querySelectorAll('.services-page-card').forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Automatically highlight first visible card in selected category
+            const firstVisibleCard = document.querySelector(`.services-page-card[data-category="${category}"]`);
+            const cardToHighlight = firstVisibleCard;
+
+            if (cardToHighlight) {
+                document.querySelectorAll('.services-page-card').forEach(c => c.classList.remove('highlighted'));
+                cardToHighlight.classList.add('highlighted');
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
