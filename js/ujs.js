@@ -83,6 +83,24 @@
     initSections();
   }
 
+  // Clean URLs: strip .html extension from address bar dynamically
+  if (window.location.protocol.startsWith('http')) {
+    if (window.location.pathname.endsWith('.html')) {
+      const cleanPath = window.location.pathname.replace('.html', '');
+      window.history.replaceState(null, '', cleanPath);
+    }
+
+    // Rewrite anchor tags dynamically on load to keep them extensionless
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('a[href$=".html"]').forEach(anchor => {
+        const href = anchor.getAttribute('href');
+        if (href && !href.startsWith('http') && href.endsWith('.html')) {
+          anchor.setAttribute('href', href.replace('.html', ''));
+        }
+      });
+    });
+  }
+
   window.UJS = {
     loadSections: initSections,
     loadSection: loadSection

@@ -35,28 +35,34 @@
                 <div class="services-info-section">
                     <div class="services-info-container">
                         <div class="services-info-image-col">
-                            <img src="assets/images/services-why-us.png" alt="Collaborative Teamwork" class="services-info-img" />
+                            <img src="assets/images/services-why-us.png" alt="Collaborative Teamwork"
+                                class="services-info-img" />
                         </div>
                         <div class="services-info-text-col">
                             <h2 class="services-info-title">Why Choose Us To Join Our Work?</h2>
                             <p class="services-info-desc">
-                                We combine data-driven marketing strategy with world-class software engineering. No more juggling between developers who don't understand marketing and marketers who don't understand tech.
+                                We combine data-driven marketing strategy with world-class software engineering. No more
+                                juggling between developers who don't understand marketing and marketers who don't
+                                understand tech.
                             </p>
                             <ul class="services-info-list">
                                 <li class="services-info-list-item">
-                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="services-info-check">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" class="services-info-check">
                                         <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
                                     <span>Transparent, performance-based success metrics</span>
                                 </li>
                                 <li class="services-info-list-item">
-                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="services-info-check">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" class="services-info-check">
                                         <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
                                     <span>Custom, developer-ready software architectures</span>
                                 </li>
                                 <li class="services-info-list-item">
-                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" class="services-info-check">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" class="services-info-check">
                                         <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
                                     <span>Unified execution ensuring design and tech alignment</span>
@@ -80,8 +86,8 @@
 
     <!-- Modular Section Loader (UJS) & Section Data -->
     <script src="js/sections-data.js"></script>
-    <script src="js/ujs.js"></script>
-    <script src="js/animations.js?v=2"></script>
+    <script src="js/ujs.js?v=2"></script>
+    <script src="js/animations.js?v=3"></script>
 
     <!-- Script to toggle active cards dynamically -->
     <!-- <script>
@@ -105,170 +111,485 @@
         // 1. Data Store containing detailed specs for each service (18 separate customizable blocks)
         const SERVICES_DATA = {
             // ================= TAB 1: DIGITAL MARKETING CARDS (prefix 'm-') =================
-            "m-digital-strategy": {
-                title: "Digital Strategy",
+            // 
+            "m-digital-marketing": {
+                title: "Digital Marketing",
                 subtitle: "PLANNING & POSITIONING",
-                about: "We start every engagement here. Before a single pixel is designed, we map your market, your audience, and your competitors, then translate that into a digital strategy your whole team can rally behind — one that ties every future decision back to a measurable business outcome.",
+                about: "We build tailored digital marketing strategies designed around your business goals, audience, and market. From multi-channel campaigns to data-driven optimization, we focus on increasing your brand visibility, reaching the right audience, and turning marketing efforts into measurable business growth and ROI.",
                 steps: [
-                    { title: "Discover", desc: "Stakeholder interviews, audience research, and a full audit of what you already have.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>` },
-                    { title: "Define", desc: "We turn findings into a positioning statement and a prioritised set of goals.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>` },
-                    { title: "Plan", desc: "A channel-by-channel roadmap with timelines, owners, and success metrics.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>` },
-                    { title: "Review", desc: "We present the strategy, pressure-test it with your team, and lock the plan.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
-                ]
-            },
-            "m-ux-design": {
-                title: "UX Design",
-                subtitle: "RESEARCH & WIREFRAMING",
-                about: "We design interfaces that are intuitive, easy to navigate, and conversion-focused. Our UX design process ensures that users can easily find what they need, leading to higher satisfaction and increased customer conversions.",
-                steps: [
-                    { title: "Research", desc: "Understanding user behavior, creating personas, and analyzing user flows.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>` },
-                    { title: "Wireframe", desc: "Creating low-fidelity skeletal frameworks of your web pages and screens.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>` },
-                    { title: "Prototype", desc: "Interactive mockups that simulate real user interactions and flows.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>` },
-                    { title: "Test", desc: "Gathering user feedback and iterating to solve usability issues.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
-                ]
-            },
-            "m-product-design": {
-                title: "Product Design",
-                subtitle: "CONCEPT & PROTOTYPING",
-                about: "We bring your digital product ideas to life with stunning visuals and interactive prototypes. From mobile applications to SaaS platforms, we design products that users love.",
-                steps: [
-                    { title: "Ideate", desc: "Brainstorming concepts, features, and visual directions.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>` },
-                    { title: "Design", desc: "Creating high-fidelity UI designs with custom assets and visual systems.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path></svg>` },
-                    { title: "Prototype", desc: "Building interactive click-throughs to validate features and layout.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>` },
-                    { title: "Handoff", desc: "Providing developer-ready design assets, specs, and components.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
-                ]
-            },
-            "m-content-strategy": {
-                title: "Content Strategy",
-                subtitle: "COPYWRITING & SEO",
-                about: "Words are the lifeblood of conversions. We plan, write, and optimize high-quality content that drives traffic, engages your audience, and converts visitors into loyal customers.",
-                steps: [
-                    { title: "Audit", desc: "Reviewing existing content performance, keyword rankings, and gaps.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>` },
-                    { title: "Plan", desc: "Creating a content calendar, targeting valuable user search intents.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>` },
-                    { title: "Write", desc: "Drafting search-optimized copy that engages and converts.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>` },
-                    { title: "Distribute", desc: "Publishing, tracking performance, and updating content dynamically.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
-                ]
-            },
-            "m-design-concept": {
-                title: "Design & Concept",
-                subtitle: "BRANDING & IDENTITY",
-                about: "We establish a cohesive brand identity that sets you apart from competitors. From logos to color schemes, we build visual languages that tell your story.",
-                steps: [
-                    { title: "Brief", desc: "Defining your brand values, voice, and unique market positioning.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>` },
-                    { title: "Concepts", desc: "Developing logo marks, typography pairings, and palettes.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"></path><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"></path></svg>` },
-                    { title: "Refine", desc: "Polishing the chosen concept based on feedback.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>` },
-                    { title: "Guidelines", desc: "Compiling a comprehensive brand book for marketing consistency.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                    {
+                        title: "Customized Strategies",
+                        desc: "Tailored digital marketing strategies built around your business goals, target audience, and market.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.42 1.42-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1 1.55V21h-2v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.88.34l-.06.06-1.42-1.42.06-.06A1.7 1.7 0 0 0 9.4 15a1.7 1.7 0 0 0-1.55-1H7v-2h.85a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.88L9 9.06l1.42-1.42.06.06A1.7 1.7 0 0 0 12.36 8.04a1.7 1.7 0 0 0 1-1.55V6h2v.49a1.7 1.7 0 0 0 1 1.55 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.42 1.42-.06.06A1.7 1.7 0 0 0 19.4 11c.17.61.72 1 1.35 1H21v2h-.25a1.7 1.7 0 0 0-1.35 1z"></path>
+                        </svg>`
+                    },
+                    {
+                        title: "Multi-Channel Campaigns",
+                        desc: "Coordinated campaigns across the right digital channels to maximize reach, engagement, and conversions.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                        </svg>`
+                    },
+                    {
+                        title: "Data-Driven Decisions",
+                        desc: "We use performance data, analytics, and insights to continuously improve campaign effectiveness.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>`
+                    },
+                    {
+                        title: "Brand Visibility & Growth",
+                        desc: "Strengthen your online presence, increase brand awareness, and create sustainable audience growth.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 17 9 11 13 15 21 7"></polyline>
+                            <polyline points="14 7 21 7 21 14"></polyline>
+                        </svg>`
+                    },
+                    {
+                        title: "ROI-Focused Marketing",
+                        desc: "Every campaign is measured against meaningful business outcomes to maximize your marketing ROI.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H15a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>`
+                    }
                 ]
             },
             "m-social-media": {
-                title: "Social Media",
-                subtitle: "COMMUNITY & CAMPAIGNS",
-                about: "We grow your brand presence and engage audiences across social channels. From daily posts to viral campaigns, we connect your business with users where they hang out.",
+                title: "Social Media Marketing",
+                subtitle: "MANAGEMENT & ENGAGEMENT",
+                about: "We manage and grow your social media presence across the platforms that matter most to your audience. From content planning and consistent posting to audience engagement, we create meaningful interactions that build brand awareness and long-term community growth.",
                 steps: [
-                    { title: "Strategy", desc: "Picking key channels, content pillars, and tone of voice.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>` },
-                    { title: "Create", desc: "Producing high-quality reels, posts, graphics, and video scripts.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>` },
-                    { title: "Engage", desc: "Monitoring comment sections, building communities, and starting conversations.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>` },
-                    { title: "Optimize", desc: "Analyzing weekly analytics to double down on what works.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>` }
+                    {
+                        title: "Instagram Management",
+                        desc: "Managing your Instagram presence with engaging content, consistent posting, and a strategy built around your audience.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>`
+                    },
+                    {
+                        title: "Facebook Management",
+                        desc: "Building and maintaining your Facebook page with relevant content designed to increase reach and engagement.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>`
+                    },
+                    {
+                        title: "LinkedIn Management",
+                        desc: "Creating professional LinkedIn content that strengthens your brand authority and connects with the right audience.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="8" y1="11" x2="8" y2="16"></line><line x1="8" y1="8" x2="8.01" y2="8"></line><path d="M12 16v-5"></path><path d="M12 13a3 3 0 0 1 6 0v3"></path></svg>`
+                    },
+                    {
+                        title: "Content Planning",
+                        desc: "Planning and scheduling posts, creatives, reels, and campaigns to maintain a consistent social presence.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>`
+                    },
+                    {
+                        title: "Audience Engagement",
+                        desc: "Engaging with followers, responding to conversations, and building an active community around your brand.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`
+                    }
+                ]
+            },
+
+            "m-seo": {
+                title: "SEO",
+                subtitle: "VISIBILITY & ORGANIC GROWTH",
+                about: "We improve your search visibility through a comprehensive SEO approach covering keyword research, on-page optimization, technical improvements, local and off-page SEO, and organic growth strategies designed to attract more qualified visitors.",
+                steps: [
+                    {
+                        title: "Keyword Research",
+                        desc: "Identifying valuable keywords and search opportunities aligned with your audience, industry, and business goals.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`
+                    },
+                    {
+                        title: "On-Page SEO",
+                        desc: "Optimizing content, headings, metadata, URLs, internal links, and page structure for better search performance.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="7" y1="8" x2="17" y2="8"></line><line x1="7" y1="12" x2="14" y2="12"></line><line x1="7" y1="16" x2="11" y2="16"></line></svg>`
+                    },
+                    {
+                        title: "Technical SEO",
+                        desc: "Identifying and addressing technical issues that affect crawling, indexing, website performance, and search rankings.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polyline></svg>`
+                    },
+                    {
+                        title: "Local & Off-Page SEO",
+                        desc: "Improving local search presence and building online authority through relevant off-page SEO activities.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"></circle><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"></path></svg>`
+                    },
+                    {
+                        title: "Organic Traffic Growth",
+                        desc: "Monitoring rankings, visibility, and organic traffic while continuously improving the strategy for sustainable growth.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"></polyline><polyline points="14 7 21 7 21 14"></polyline></svg>`
+                    }
+                ]
+            },
+
+            "m-lead-generation": {
+                title: "Lead Generation & Performance Marketing",
+                subtitle: "PAID CAMPAIGNS & CONVERSIONS",
+                about: "We create targeted performance marketing campaigns designed to generate qualified leads and measurable business results. Through audience segmentation, Meta and Google Ads, conversion-focused campaigns, and continuous optimization, we turn advertising spend into meaningful growth.",
+                steps: [
+                    {
+                        title: "Targeted Lead Generation",
+                        desc: "Creating campaigns focused on reaching potential customers who are most likely to need and convert from your offering.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path></svg>`
+                    },
+                    {
+                        title: "Meta & Google Ads",
+                        desc: "Planning, launching, and managing paid campaigns across Meta and Google to reach high-intent audiences.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`
+                    },
+                    {
+                        title: "Audience Segmentation",
+                        desc: "Dividing audiences based on demographics, interests, behaviors, intent, and campaign performance.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"></circle><path d="M17 11a4 4 0 1 0 0-8"></path><path d="M3 21c0-4 2.7-7 6-7s6 3 6 7"></path><path d="M17 14c2.2.4 4 2.5 4 5"></path></svg>`
+                    },
+                    {
+                        title: "Conversion Campaigns",
+                        desc: "Building campaigns around strong messaging, offers, landing pages, and calls-to-action that encourage conversions.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>`
+                    },
+                    {
+                        title: "Performance Optimization",
+                        desc: "Regularly analyzing campaign data and optimizing budgets, audiences, creatives, and bidding for better results.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+                    }
+                ]
+            },
+
+            "m-graphic-design": {
+                title: "Graphic Design & Video Editing",
+                subtitle: "CREATIVE & VISUAL CONTENT",
+                about: "We create scroll-stopping visual content that helps your brand stand out across digital channels. From social media creatives and professional brand designs to reels, promotional videos, and advertisements, every asset is designed to stay consistent with your brand.",
+                steps: [
+                    {
+                        title: "Social Creatives",
+                        desc: "Creating scroll-stopping social media graphics designed to capture attention and increase engagement.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>`
+                    },
+                    {
+                        title: "Brand Designs",
+                        desc: "Designing professional visual assets that communicate your brand identity clearly and consistently.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle></svg>`
+                    },
+                    {
+                        title: "Reels & Short Videos",
+                        desc: "Editing engaging reels and short-form videos optimized for modern social media platforms.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`
+                    },
+                    {
+                        title: "Promotional Videos",
+                        desc: "Producing promotional and advertising videos that communicate your message and drive audience action.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="15" height="14" rx="2"></rect><polygon points="18 9 22 7 22 17 18 15"></polygon></svg>`
+                    },
+                    {
+                        title: "Brand-Consistent Visuals",
+                        desc: "Maintaining consistent colors, typography, imagery, and visual language across every creative asset.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+                    }
+                ]
+            },
+
+            "m-content-strategy": {
+                title: "Content Marketing",
+                subtitle: "CONTENT & STORYTELLING",
+                about: "We create purposeful content that attracts the right audience, communicates your value clearly, and supports your marketing goals. From SEO-friendly website content and blogs to social media posts and advertising copy, every piece is created to inform, engage, and convert.",
+                steps: [
+                    {
+                        title: "SEO-Friendly Content",
+                        desc: "Creating valuable content optimized for search engines while keeping it useful, natural, and engaging for readers.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`
+                    },
+                    {
+                        title: "Website & Blog Writing",
+                        desc: "Writing clear, informative website pages and blogs that communicate your expertise and attract potential customers.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>`
+                    },
+                    {
+                        title: "Social Media Content",
+                        desc: "Developing platform-specific content that keeps your audience engaged and strengthens your social presence.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`
+                    },
+                    {
+                        title: "Ad & Marketing Copy",
+                        desc: "Writing persuasive advertising and marketing copy designed to capture attention and encourage action.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"></path><line x1="8" y1="9" x2="16" y2="9"></line><line x1="8" y1="13" x2="14" y2="13"></line><line x1="8" y1="17" x2="12" y2="17"></line></svg>`
+                    },
+                    {
+                        title: "Audience Storytelling",
+                        desc: "Using audience-focused storytelling to build trust, communicate value, and create stronger customer connections.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11.5a8 8 0 1 1-4.5-7.2"></path><polyline points="20 4 20 11 13 11"></polyline></svg>`
+                    }
                 ]
             },
 
             // ================= TAB 2: IT & DESIGN CARDS (prefix 'd-') =================
             "d-digital-strategy": {
-                title: "IT Digital Strategy",
-                subtitle: "SYSTEM ARCHITECTURE",
-                about: "Designing system software strategies, choosing infrastructure tech stacks, and cloud migrations blueprints.",
+                title: "Website Design & Development",
+                subtitle: "DESIGN & DEVELOPMENT",
+                about: "We build professional, responsive websites designed around your business goals and customer needs. From business websites and landing pages to e-commerce platforms, redesigns, and ongoing maintenance, we create digital experiences that support your growth.",
                 steps: [
-                    { title: "Audit Tech", desc: "Analyzing your current hosting and system capabilities.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                    {
+                        title: "Business Websites",
+                        desc: "Creating professional and responsive websites that establish your online presence and support your business objectives.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"></rect><line x1="8" y1="22" x2="16" y2="22"></line><line x1="12" y1="18" x2="12" y2="22"></line></svg>`
+                    },
+                    {
+                        title: "Landing Pages",
+                        desc: "Designing focused landing pages built to communicate your offer clearly and drive conversions.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><path d="M8 9h8M8 13h5"></path></svg>`
+                    },
+                    {
+                        title: "E-commerce Websites",
+                        desc: "Building user-friendly online stores with product catalogs, shopping flows, and essential e-commerce functionality.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6"></path></svg>`
+                    },
+                    {
+                        title: "Website Redesign",
+                        desc: "Refreshing outdated websites with modern layouts, improved usability, responsive design, and better performance.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg>`
+                    },
+                    {
+                        title: "Website Maintenance",
+                        desc: "Providing ongoing updates, improvements, security checks, and technical maintenance to keep your website reliable.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path><circle cx="12" cy="12" r="3"></circle></svg>`
+                    }
                 ]
             },
+
             "d-ux-design": {
-                title: "Software UX Design",
-                subtitle: "APP INTERACTION & FLOWS",
-                about: "Complex application dashboards, SaaS layouts, and user interactive flows built for software systems.",
+                title: "Software & Business Solutions",
+                subtitle: "CUSTOM SOFTWARE & INTEGRATIONS",
+                about: "We develop customized software and digital solutions tailored to your business requirements. From custom applications and CRM systems to workflow automation and third-party integrations, we build technology that improves how your business operates.",
                 steps: [
-                    { title: "Wireframes", desc: "Creating low-fi UI blueprints of web/mobile apps.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                    {
+                        title: "Custom Software Development",
+                        desc: "Building tailored software solutions around your specific business processes, requirements, and operational goals.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="8 9 4 12 8 15"></polyline><polyline points="16 9 20 12 16 15"></polyline><line x1="14" y1="5" x2="10" y2="19"></line></svg>`
+                    },
+                    {
+                        title: "CRM Solutions",
+                        desc: "Creating CRM solutions that help manage customers, leads, sales activities, and business relationships efficiently.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"></circle><path d="M3 21c0-4 2.7-7 6-7s6 3 6 7"></path><path d="M16 11h5M18.5 8.5v5"></path></svg>`
+                    },
+                    {
+                        title: "Business Management Systems",
+                        desc: "Developing centralized systems to manage operations, employees, data, workflows, and business activities.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="9" x2="9" y2="21"></line></svg>`
+                    },
+                    {
+                        title: "Workflow Automation",
+                        desc: "Automating repetitive business processes to reduce manual work, improve accuracy, and increase productivity.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="6" height="6"></rect><rect x="15" y="15" width="6" height="6"></rect><path d="M9 6h3a3 3 0 0 1 3 3v6"></path><polyline points="12 12 15 15 12 18"></polyline></svg>`
+                    },
+                    {
+                        title: "Third-Party Integrations",
+                        desc: "Connecting external tools, APIs, payment systems, platforms, and services to create a connected technology ecosystem.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><line x1="8.6" y1="10.7" x2="15.4" y2="7.3"></line><line x1="8.6" y1="13.3" x2="15.4" y2="16.7"></line></svg>`
+                    }
                 ]
             },
+
             "d-product-design": {
-                title: "IT Product Design",
-                subtitle: "SaaS & APP LAYOUTS",
-                about: "Creating full software UI assets, interface components design, and interactive click-through prototypes.",
+                title: "IT Support & Maintenance",
+                subtitle: "SUPPORT & RELIABILITY",
+                about: "We provide reliable technical support, troubleshooting, configuration, and ongoing maintenance to keep your digital systems running smoothly. Our support helps businesses resolve technical issues quickly and maintain stable, secure, and dependable operations.",
                 steps: [
-                    { title: "UI Mockups", desc: "High-fidelity mockups of screens.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                    {
+                        title: "Technical Support",
+                        desc: "Providing technical assistance for software, systems, websites, and common day-to-day technology issues.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M9 12a3 3 0 1 0 6 0"></path><path d="M12 3v3M12 18v3"></path></svg>`
+                    },
+                    {
+                        title: "System Troubleshooting",
+                        desc: "Diagnosing technical problems and implementing solutions to restore systems and applications to proper operation.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path><circle cx="12" cy="12" r="5"></circle></svg>`
+                    },
+                    {
+                        title: "Software Installation",
+                        desc: "Installing, configuring, and setting up required software and systems according to your business environment.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg>`
+                    },
+                    {
+                        title: "Website Support",
+                        desc: "Handling website updates, content changes, technical fixes, performance issues, and ongoing support requirements.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"></rect><line x1="8" y1="22" x2="16" y2="22"></line><line x1="12" y1="18" x2="12" y2="22"></line></svg>`
+                    },
+                    {
+                        title: "Regular IT Maintenance",
+                        desc: "Performing regular updates, checks, monitoring, and maintenance to keep your IT environment stable and reliable.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path><circle cx="12" cy="12" r="4"></circle></svg>`
+                    }
                 ]
             },
+
             "d-content-strategy": {
-                title: "Software Documentation",
-                subtitle: "API & WIKIS",
-                about: "Organizing readable technical user guides, API references, and developer documentation systems.",
+                title: "AI & Cloud Solutions",
+                subtitle: "AI, CLOUD & AUTOMATION",
+                about: "We implement smart AI and cloud solutions that help businesses automate operations, improve efficiency, manage data securely, and scale with confidence. From AI-powered automation and chatbots to cloud infrastructure, backups, and integrations, we connect technology with practical business outcomes.",
                 steps: [
-                    { title: "API Audit", desc: "Reviewing endpoint formats and responses.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
+                    {
+                        title: "AI-Powered Automation",
+                        desc: "Using AI to automate repetitive tasks, streamline operations, and improve productivity across business processes.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path><circle cx="12" cy="12" r="5"></circle></svg>`
+                    },
+                    {
+                        title: "AI Chatbots & Assistants",
+                        desc: "Building intelligent chatbots and virtual assistants that help customers and teams access information faster.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><circle cx="9" cy="10" r="1"></circle><circle cx="15" cy="10" r="1"></circle></svg>`
+                    },
+                    {
+                        title: "Cloud Setup & Management",
+                        desc: "Setting up and managing cloud infrastructure, services, environments, and resources for secure business operations.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.5 19H9a7 7 0 1 1 6.7-9H17a5 5 0 0 1 .5 9z"></path></svg>`
+                    },
+                    {
+                        title: "Data Backup & Storage",
+                        desc: "Implementing reliable backup and storage solutions to protect important business data and improve recovery readiness.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v7c0 1.7 3.6 3 8 3s8-1.3 8-3V5"></path><path d="M4 12v7c0 1.7 3.6 3 8 3s8-1.3 8-3v-7"></path></svg>`
+                    },
+                    {
+                        title: "AI & Cloud Integration",
+                        desc: "Connecting AI tools and cloud services with existing applications and business systems for seamless operations.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><line x1="8.6" y1="10.7" x2="15.4" y2="7.3"></line><line x1="8.6" y1="13.3" x2="15.4" y2="16.7"></line></svg>`
+                    }
                 ]
             },
+
             "d-design-concept": {
-                title: "Tech Concept Design",
-                subtitle: "APP BLUEPRINTS",
-                about: "Validating technology logic concepts, building system prototypes, and drafting software flows.",
+                title: "UI/UX Design",
+                subtitle: "DIGITAL EXPERIENCES",
+                about: "We design user-friendly and visually engaging digital experiences for websites and applications. Our UI/UX process combines intuitive user flows, thoughtful interface design, wireframes, prototypes, and scalable design systems to create products users enjoy using.",
                 steps: [
-                    { title: "Logical Design", desc: "Mapping DB schemas and services relations.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5M17 19H9.5"/></svg>` }
+                    {
+                        title: "Website UI Design",
+                        desc: "Designing modern, responsive, and visually engaging interfaces for business and web applications.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"></rect><line x1="8" y1="22" x2="16" y2="22"></line><line x1="12" y1="18" x2="12" y2="22"></line></svg>`
+                    },
+                    {
+                        title: "Mobile App UI",
+                        desc: "Creating intuitive mobile application interfaces designed for smooth navigation and engaging user experiences.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="2" width="12" height="20" rx="2"></rect><line x1="10" y1="18" x2="14" y2="18"></line></svg>`
+                    },
+                    {
+                        title: "User Experience Design",
+                        desc: "Designing logical user journeys and interactions that make digital products easy and enjoyable to use.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3"></circle><line x1="12" y1="3" x2="12" y2="9"></line></svg>`
+                    },
+                    {
+                        title: "Wireframing & Prototyping",
+                        desc: "Creating wireframes and interactive prototypes to validate layouts, flows, and product experiences before development.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`
+                    },
+                    {
+                        title: "Design Systems",
+                        desc: "Building reusable components, styles, and guidelines that maintain consistency across digital products.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>`
+                    }
                 ]
             },
+
             "d-social-media": {
-                title: "Tech Communication",
-                subtitle: "DEV RELATIONS",
-                about: "Handling community channels like Discord, developer forums, and open-source updates support.",
+                title: "Business Automation & Digital Transformation",
+                subtitle: "AUTOMATION & BUSINESS EFFICIENCY",
+                about: "We transform manual business processes into smarter, more efficient digital workflows. By combining process automation, CRM systems, lead management, reporting dashboards, and AI-powered solutions, we help businesses reduce repetitive work and make better decisions.",
                 steps: [
-                    { title: "Setup Forum", desc: "Initializing dev support ticket channels.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                    {
+                        title: "Process Automation",
+                        desc: "Automating repetitive workflows and manual processes to reduce operational effort and improve efficiency.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="6" height="6"></rect><rect x="15" y="15" width="6" height="6"></rect><path d="M9 6h3a3 3 0 0 1 3 3v6"></path></svg>`
+                    },
+                    {
+                        title: "CRM Automation",
+                        desc: "Automating customer and sales workflows inside CRM systems to improve productivity and follow-up processes.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"></circle><path d="M3 21c0-4 2.7-7 6-7s6 3 6 7"></path><path d="M16 11h5"></path></svg>`
+                    },
+                    {
+                        title: "Lead Management Systems",
+                        desc: "Creating systems that capture, organize, track, and distribute leads throughout the sales process.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"></path><path d="M18 4l3 3-3 3"></path></svg>`
+                    },
+                    {
+                        title: "Reporting & Dashboards",
+                        desc: "Building clear dashboards and reports that turn business data into useful insights for faster decision-making.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>`
+                    },
+                    {
+                        title: "AI-Powered Business Solutions",
+                        desc: "Using AI-powered tools and intelligent workflows to improve business operations, productivity, and scalability.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"></path><circle cx="12" cy="12" r="5"></circle></svg>`
+                    }
                 ]
             },
 
             // ================= TAB 3: OTHERS CARDS (prefix 'o-') =================
             "o-digital-strategy": {
-                title: "Other Digital Strategy",
-                subtitle: "MISCELLANEOUS CONSULTING",
-                about: "Custom business strategy consultations, workflow upgrades, and automation solutions planning.",
+                title: "Tender Management",
+                subtitle: "TENDER SUPPORT & COMPLIANCE",
+                about: "We provide end-to-end tender support to help businesses identify relevant opportunities, prepare accurate documentation, and successfully participate in government and private tenders. From tender discovery to bid preparation, GeM assistance, and final submission, we help simplify the entire process.",
                 steps: [
-                    { title: "First Meeting", desc: "Understanding the unique goals of your company.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                    {
+                        title: "Tender Search & Identification",
+                        desc: "Identifying relevant government and private tender opportunities that match your business capabilities and requirements.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`
+                    },
+                    {
+                        title: "Tender Document Preparation",
+                        desc: "Preparing and organizing required tender documents, forms, certificates, and supporting information accurately.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"></rect><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="13" y2="16"></line></svg>`
+                    },
+                    {
+                        title: "Technical & Financial Bid Support",
+                        desc: "Supporting the preparation of technical proposals and financial bids according to tender requirements and evaluation criteria.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H15a3.5 3.5 0 0 1 0 7H6"></path></svg>`
+                    },
+                    {
+                        title: "GeM Tender Assistance",
+                        desc: "Assisting businesses with Government e-Marketplace tender processes, documentation, listings, and participation requirements.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`
+                    },
+                    {
+                        title: "Compliance & Submission Support",
+                        desc: "Reviewing requirements, ensuring compliance, and supporting accurate and timely tender submission.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>`
+                    }
                 ]
             },
+
             "o-ux-design": {
-                title: "Other UX Consulting",
-                subtitle: "USABILITY TESTING",
-                about: "Performing third-party audits of your existing platforms to identify critical conversion bottlenecks.",
+                title: "E-Commerce Product Listing",
+                subtitle: "PRODUCT VISIBILITY & SALES",
+                about: "We create professional e-commerce product listings designed to improve product visibility, presentation, and sales. From optimized titles and descriptions to product images, catalogs, attributes, and SEO-friendly content, we ensure your products are presented clearly and effectively across e-commerce platforms.",
                 steps: [
-                    { title: "Auditing", desc: "Running user recordings and heatmaps on live apps.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
-                ]
-            },
-            "o-product-design": {
-                title: "Other Product Design",
-                subtitle: "CUSTOM GRAPHICS",
-                about: "Designing pitch decks, presentation slides, and custom illustrations for conferences.",
-                steps: [
-                    { title: "Draft Layout", desc: "Structuring presentation slides flow.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
-                ]
-            },
-            "o-content-strategy": {
-                title: "Other Copywriting",
-                subtitle: "EMAIL & SALES COPY",
-                about: "Drafting high-converting email sequences, newsletters, and cold sales outreach templates.",
-                steps: [
-                    { title: "Sequence Flow", desc: "Mapping user triggers for automated emails.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
-                ]
-            },
-            "o-design-concept": {
-                title: "Other Visual Concepts",
-                subtitle: "MERCHANDISE & PRINTS",
-                about: "Custom clothing prints design, packaging design, and physical marketing merchandise assets.",
-                steps: [
-                    { title: "Mockup prints", desc: "Placing vector arts on package models.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect></svg>` }
-                ]
-            },
-            "o-social-media": {
-                title: "Other Communities",
-                subtitle: "EVENT MANAGEMENT",
-                about: "Coordinating webinars, online summits, and digital community launch events.",
-                steps: [
-                    { title: "Schedule", desc: "Structuring speakers and platform streaming assets.", icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>` }
+                    {
+                        title: "Product Title & Description",
+                        desc: "Creating clear, compelling product titles and descriptions that communicate key features and encourage customers to buy.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><line x1="8" y1="9" x2="16" y2="9"></line><line x1="8" y1="13" x2="14" y2="13"></line><line x1="8" y1="17" x2="12" y2="17"></line></svg>`
+                    },
+                    {
+                        title: "SEO-Friendly Product Content",
+                        desc: "Optimizing product content with relevant search terms to improve discoverability and visibility on e-commerce platforms.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`
+                    },
+                    {
+                        title: "Image & Creative Optimization",
+                        desc: "Optimizing product images and visual creatives to present products professionally and capture customer attention.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>`
+                    },
+                    {
+                        title: "Product Catalog Management",
+                        desc: "Organizing and maintaining product catalogs to keep product information, categories, and inventory details structured.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"></path><line x1="8" y1="8" x2="16" y2="8"></line><line x1="8" y1="12" x2="16" y2="12"></line><line x1="8" y1="16" x2="13" y2="16"></line></svg>`
+                    },
+                    {
+                        title: "Listing & Attribute Management",
+                        desc: "Managing product listings, categories, specifications, variants, and attributes for accurate marketplace presentation.",
+                        icon: `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>`
+                    }
                 ]
             }
         };
@@ -319,15 +640,27 @@
             }
         }
 
+        // // 4. Open Lead generation modal helper
+        // function openLeadModal(e) {
+        //     if (e) e.preventDefault();
+        //     const leadModal = document.getElementById('leadModal');
+        //     if (leadModal) {
+        //         leadModal.classList.add('modal-open');
+        //         document.body.style.overflow = 'hidden';
+        //     }
+        // }
+
         // 4. Open Lead generation modal helper
         function openLeadModal(e) {
             if (e) e.preventDefault();
-            const leadModal = document.getElementById('leadModal');
+            const leadModals = document.querySelectorAll('#leadModal');
+            const leadModal = leadModals[leadModals.length - 1];
             if (leadModal) {
                 leadModal.classList.add('modal-open');
                 document.body.style.overflow = 'hidden';
             }
         }
+
 
         // Tab switching filter logic
         function switchTab(tabElement, category) {
