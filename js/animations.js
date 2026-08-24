@@ -496,7 +496,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const interactiveElements = document.querySelectorAll('a, button, [role="button"]');
     interactiveElements.forEach(el => {
       const text = el.textContent.trim().toLowerCase();
-      if (text === 'get started' || text === 'book a demo' || text === 'login/get started' || text === 'contact us' || el.classList.contains('get-started-btn')) {
+      if (text === 'get started' || text === 'get started today' || text === 'book a demo' || text === 'login/get started' || text === 'contact us' || el.classList.contains('get-started-btn')) {
         el.removeAttribute('href'); // disable default anchor link redirect
         el.style.cursor = 'pointer';
         el.addEventListener('click', (e) => {
